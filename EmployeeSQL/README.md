@@ -23,4 +23,4 @@ The following ERD was generated based on the structure of data in the foloowing 
 -  salaries.csv
 -  titles.csv
 
-![alt text][ERD.png]
+![alt text](./ERD.png "Entitiy Relational Diagram")
