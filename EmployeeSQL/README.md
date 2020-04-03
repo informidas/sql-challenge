@@ -28,11 +28,12 @@ The following ERD was generated based on the structure of data in the following 
 
 ## Data Engineering
 Using the ERD diagram as a guide, the following PostgreSQL database schema was generated to convert the model into a series of tables with correspondng PRIMARY KEYS, FOREIGN KEYS and other Constraints.  <br>
-<blockquote style=background-color:"blue";>
+<blockquote>
 -- CREATE a container Database <br>
 CREATE DATABASE PewlettHackard <br>
 <br>
 /* Scripts to generate tables  */ <br>
+<br>
 <br>
  -- employees table <br>
 DROP TABLE IF EXISTS employees <br>
@@ -43,5 +44,57 @@ first_name VARCHAR(100) NOT NULL, <br>
 last_name VARCHAR(100) NOT NULL, <br>
 gender CHAR(1), <br>
 hire_date DATE <br>
+); <br>
+<br>
+<br>
+-- titles table <br>
+DROP TABLE IF EXISTS titles <br>
+CREATE TABLE titles ( <br>
+emp_no	INT NOT NULL, <br>
+title  VARCHAR(100) NOT NULL, <br>
+from_date DATE NOT NULL, <br>
+to_date DATE DEFAULT '1/1/9999', <br>
+PRIMARY KEY (emp_no, title) <br>
+); <br>
+<br>
+<br>
+-- salaries table <br>
+DROP TABLE IF EXISTS salaries <br>
+CREATE TABLE salaries ( <br>
+emp_no	INT NOT NULL, <br>
+salary	int NOT NULL, <br>
+from_date DATE NOT NULL, <br>
+to_date DATE NOT NULL, <br>
+PRIMARY KEY (emp_no, from_date) <br>
+); <br>
+<br>
+<br>
+-- departments table <br>
+DROP TABLE IF EXISTS  departments <br>
+CREATE TABLE departments ( <br>
+dept_no SERIAL PRIMARY KEY, <br>
+dept_name VARCHAR(100) NOT NULL <br>
+ ); <br>
+<br>
+<br>
+-- dept_managers table <br>
+DROP TABLE IF EXISTS dept_managers <br>
+CREATE TABLE dept_managers ( <br>
+dept_no 	INT  NOT NULL, <br>
+emp_no		INT NOT NULL, <br>
+from_date	DATE NOT NULL, <br>
+to_date		DATE DEFAULT '1/1/9999', <br>
+PRIMARY KEY (dept_no, from_date) <br>
+); <br>
+<br>
+<br>
+-- dept_emp table <br>
+DROP TABLE IF EXISTS dept_emp <br>
+CREATE TABLE dept_emp ( <br>
+emp_no 	INT NOT NULL, <br>
+dept_no INT NOT NULL, <br>
+from_date DATE NOT NULL, <br>
+to_date   DATE DEFAULT '1/1/9999', <br>
+PRIMARY KEY (emp_no, dept_no, from_date) <br>
 ); <br>
 </blockquote>
