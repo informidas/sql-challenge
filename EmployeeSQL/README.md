@@ -14,7 +14,7 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 
 ## Entity Relational Model
 
-The following ERD was generated based on the structure of data in the foloowing csv files: <br>
+The following ERD was generated based on the structure of data in the following csv files: <br>
 
 -  departments.csv
 -  dept_emp.csv
@@ -22,5 +22,6 @@ The following ERD was generated based on the structure of data in the foloowing 
 -  employees.csv
 -  salaries.csv
 -  titles.csv
+---
 
 ![alt text](./ERD.png "Entitiy Relational Diagram")
