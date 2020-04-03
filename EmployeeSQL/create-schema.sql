@@ -9,6 +9,7 @@ gender CHAR(1),
 hire_date DATE
 );
 
+-- create titles table
 DROP TABLE IF EXISTS titles
 CREATE TABLE titles (
 emp_no	INT NOT NULL,
@@ -19,6 +20,7 @@ PRIMARY KEY (emp_no, title),
 FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 
+-- create salaries table
 DROP TABLE IF EXISTS salaries
 CREATE TABLE salaries (
 emp_no	INT NOT NULL,
@@ -29,12 +31,14 @@ PRIMARY KEY (emp_no, from_date),
 FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 
+-- create departments table
 DROP TABLE IF EXISTS  departments
 CREATE TABLE departments (
 dept_no SERIAL PRIMARY KEY,
 dept_name VARCHAR(100) NOT NULL
 );
 
+-- create department managers table
 DROP TABLE IF EXISTS dept_managers
 CREATE TABLE dept_managers (
 dept_no 	INT  NOT NULL,
@@ -46,6 +50,7 @@ FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
 FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 
+-- create deartment employees table
 DROP TABLE IF EXISTS dept_emp
 CREATE TABLE dept_emp (
 emp_no 	INT NOT NULL,
