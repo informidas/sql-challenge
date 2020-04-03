@@ -62,7 +62,3 @@ PRIMARY KEY (emp_no, dept_no, from_date),
 FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
 FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
-
-
-
-
