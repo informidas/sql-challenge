@@ -52,7 +52,8 @@ emp_no	INT NOT NULL, <br>
 title  VARCHAR(100) NOT NULL, <br>
 from_date DATE NOT NULL, <br>
 to_date DATE DEFAULT '1/1/9999', <br>
-PRIMARY KEY (emp_no, title) <br>
+PRIMARY KEY (emp_no, title), <br>
+FOREIGN KEY (emp_no) REFERENCES employees(emp_no) <br>
 ); <br>
 <br>
 -- salaries table <br>
@@ -62,7 +63,8 @@ emp_no	INT NOT NULL, <br>
 salary	int NOT NULL, <br>
 from_date DATE NOT NULL, <br>
 to_date DATE NOT NULL, <br>
-PRIMARY KEY (emp_no, from_date) <br>
+PRIMARY KEY (emp_no, from_date), <br>
+FOREIGN KEY (emp_no) REFERENCES employees(emp_no) <br>
 ); <br>
 <br>
 -- departments table <br>
@@ -79,7 +81,9 @@ dept_no 	INT  NOT NULL, <br>
 emp_no		INT NOT NULL, <br>
 from_date	DATE NOT NULL, <br>
 to_date		DATE DEFAULT '1/1/9999', <br>
-PRIMARY KEY (dept_no, from_date) <br>
+PRIMARY KEY (dept_no, from_date), <br>
+FOREIGN KEY (dept_no) REFERENCES departments(dept_no), <br>
+FOREIGN KEY (emp_no) REFERENCES employees(emp_no) <br>
 ); <br>
 <br>
 -- dept_emp table <br>
