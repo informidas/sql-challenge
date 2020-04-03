@@ -89,6 +89,8 @@ emp_no 	INT NOT NULL, <br>
 dept_no INT NOT NULL, <br>
 from_date DATE NOT NULL, <br>
 to_date   DATE DEFAULT '1/1/9999', <br>
-PRIMARY KEY (emp_no, dept_no, from_date) <br>
+PRIMARY KEY (emp_no, dept_no, from_date), <br>
+FOREIGN KEY (emp_no) REFERENCES employees(emp_no), <br>
+FOREIGN KEY (dept_no) REFERENCES departments(dept_no) <br>
 ); <br>
 </blockquote>
