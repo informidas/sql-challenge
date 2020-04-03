@@ -100,7 +100,7 @@ FOREIGN KEY (dept_no) REFERENCES departments(dept_no) <br>
 </blockquote>
 
 ## Data Analysis
-<blockquote>
+<blockquote> <br>
  /* Data Analysis */ <br>
 
 -- 1. List Employees with their Salaries <br>
@@ -109,7 +109,6 @@ FROM  employees e <br>
 INNER JOIN salaries s <br>
 ON e.emp_no = s.emp_no; <br>
  <br>
-
 -- 2. List of employees who were hired in 1986 <br>
 SELECT e.emp_no, e.last_name, e.first_name, e.gender, e.hire_date <br>
 FROM  employees e <br>
