@@ -101,7 +101,6 @@ FOREIGN KEY (dept_no) REFERENCES departments(dept_no) <br>
 
 ## Data Analysis
 <blockquote> <br>
- /* Data Analysis */ <br>
 
 -- 1. List Employees with their Salaries <br>
 SELECT e.emp_no, e.last_name, e.first_name, e.gender, s.salary <br>
