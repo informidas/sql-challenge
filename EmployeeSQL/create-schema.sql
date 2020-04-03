@@ -1,4 +1,5 @@
 /* Employee Database Schema */
+
 DROP TABLE IF EXISTS employees
 CREATE TABLE employees(
 emp_no  SERIAL PRIMARY KEY,
