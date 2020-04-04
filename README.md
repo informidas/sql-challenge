@@ -24,7 +24,7 @@ The following ERD was generated based on the structure of data in the following 
 -  titles.csv
 ---
 
-![alt text](./ERD.png "Entitiy Relational Diagram")
+![alt text](./EmployeeSQL/ERD.png "Entitiy Relational Diagram")
 
 ## Data Engineering
 Using the ERD diagram as a guide, the following PostgreSQL database schema was generated to convert the model into a series of tables with correspondng PRIMARY KEYS, FOREIGN KEYS and other Constraints.  <br>
