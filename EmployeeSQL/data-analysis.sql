@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 /* Data Analysis */
 
 -- 1. List Employees with their Salaries
@@ -116,4 +114,3 @@ INNER JOIN departments d
 ON d.dept_no = de.dept_no
 and de.to_date = '9999-01-01'
 and d.dept_name in ('Sales', 'Development');
->>>>>>> refs/remotes/origin/master
