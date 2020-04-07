@@ -101,14 +101,13 @@ FOREIGN KEY (dept_no) REFERENCES departments(dept_no) <br>
 
 ## Data Analysis
 <pre><code><br>
-
 -- 1. List Employees with their Salaries <br>
 SELECT e.emp_no, e.last_name, e.first_name, e.gender, s.salary <br>
 FROM  employees e <br>
 INNER JOIN salaries s <br>
 ON e.emp_no = s.emp_no; <br></code></pre>
  <br>
--- 2. List of employees who were hired in 1986 <br>
+<pre><code>-- 2. List of employees who were hired in 1986 <br>
 SELECT e.emp_no, e.last_name, e.first_name, e.gender, e.hire_date <br>
 FROM  employees e <br>
 WHERE EXTRACT(YEAR FROM e.hire_date) = 1986; </code></pre><br>
