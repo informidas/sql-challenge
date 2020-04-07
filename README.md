@@ -28,9 +28,9 @@ The following ERD was generated based on the structure of data in the following 
 
 ## Data Engineering
 Using the ERD diagram as a guide, the following PostgreSQL database schema was generated to convert the model into a series of tables with correspondng PRIMARY KEYS, FOREIGN KEYS and other Constraints.  <br>
-<pre><code><blockquote>
+<pre><code>
 -- create a container Database <br>
-CREATE DATABASE PewlettHackard <br></code></pre>
+CREATE DATABASE PewlettHackard <br>
 <br>
 /* Scripts to generate tables  */ <br>
 <br>
@@ -156,4 +156,4 @@ INNER JOIN departments d <br>
 ON d.dept_no = de.dept_no <br>
 and de.to_date = '9999-01-01' <br>
 and d.dept_name in ('Sales', 'Development'); <br> 
-</blockquote> <br>
+</code></pre>
