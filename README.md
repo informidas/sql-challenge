@@ -28,9 +28,9 @@ The following ERD was generated based on the structure of data in the following 
 
 ## Data Engineering
 Using the ERD diagram as a guide, the following PostgreSQL database schema was generated to convert the model into a series of tables with correspondng PRIMARY KEYS, FOREIGN KEYS and other Constraints.  <br>
-<blockquote>
+<pre><code><blockquote>
 -- create a container Database <br>
-CREATE DATABASE PewlettHackard <br>
+CREATE DATABASE PewlettHackard <br></code></pre>
 <br>
 /* Scripts to generate tables  */ <br>
 <br>
